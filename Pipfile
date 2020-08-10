@@ -13,6 +13,7 @@ python-decouple = "*"
 dj-database-url = "*"
 collectfast = "*"
 django-s3-folder-storage = "*"
+psycopg2-binary = "*"
 
 [requires]
 python_version = "3.8"
