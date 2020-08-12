@@ -83,6 +83,7 @@ WSGI_APPLICATION = 'projeto.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+
 # configurações do banco de dados
 default_db_url = 'sqlite:///'+os.path.join(BASE_DIR, 'db.sqlite3')
 
@@ -91,7 +92,6 @@ parse_database = partial(dj_database_url.parse, conn_max_age=600)
 DATABASES = {
     'default': config('DATABASE_URL', default = default_db_url, cast = parse_database)
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -137,24 +137,24 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
-AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=False)
 
 COLLECTFAST_ENABLED = False
 
 if AWS_ACCESS_KEY_ID:
+    COLLECTFAST_ENABLED = True
+    STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+    COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
+    INSTALLED_APPS.append('s3_folder_storage')
+    INSTALLED_APPS.append('storages')
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }
     AWS_PRELOAD_METADATA = True
     AWS_AUTO_CREATE_BUCKET = False
     AWS_QUERYSTRING_AUTH = False
-    AWS_S3_CUSTOM_DOMAIN = None
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
     AWS_DEFAULT_ACL = 'private'
-
-    COLLECTFAST_ENABLED = True
-
-    STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
-    COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
 
     STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
     STATIC_S3_PATH = 'static'
@@ -167,7 +167,6 @@ if AWS_ACCESS_KEY_ID:
     MEDIA_ROOT = f'/{DEFAULT_S3_PATH}/'
     MEDIA_URL = f'//s3.amazonaws.com/{AWS_STORAGE_BUCKET_NAME}/{DEFAULT_S3_PATH}/'
 
-    INSTALLED_APPS.append('s3_folder_storage')
-    INSTALLED_APPS.append('storages')
+
 
 
