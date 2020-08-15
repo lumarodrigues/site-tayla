@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 flake8 = "*"
+pytest-django = "*"
 
 [packages]
 django = "*"
@@ -14,6 +15,7 @@ dj-database-url = "*"
 collectfast = "*"
 django-s3-folder-storage = "*"
 psycopg2-binary = "*"
+django-debug-toolbar = "*"
 
 [requires]
 python_version = "3.8"
