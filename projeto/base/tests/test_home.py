@@ -1,5 +1,5 @@
 import pytest
-from django.test import Client
+
 from django.urls import reverse
 
 from projeto.django_assertions import assert_contains
@@ -10,7 +10,7 @@ def resp(client):
     return resp
 
 def test_status_code(resp):
-    assert resp.status_code==200
+    assert resp.status_code == 200
 
 def test_title(resp):
     assert_contains(resp, '<title>Portfólio Tayla Belinot</title>')
