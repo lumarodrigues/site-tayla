@@ -16,6 +16,7 @@ collectfast = "*"
 django-s3-folder-storage = "*"
 psycopg2-binary = "*"
 django-debug-toolbar = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.8"
