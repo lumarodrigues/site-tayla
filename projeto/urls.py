@@ -18,13 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 
-from projeto.base.views import home
+from projeto.base.views import HomePageView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name='home'),
-]
-
+    path('', HomePageView.as_view(), name='home'),
+    ]
 
 if settings.DEBUG:
     import debug_toolbar

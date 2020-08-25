@@ -70,7 +70,7 @@
 
 	</header><!-- end header -->
 
-	<section class="main">
+	<!--<section class="main">
 		<div class="work">
 			<a href="inner.html">
 				<img src="{% static 'img/foto1.jpg' %}" class="media" alt=""/>
@@ -169,17 +169,19 @@
 				</div>
 			</a>
 		</div>
-	</section><!-- end main -->
+	</section> -->
 
 	<aside>
 
+
 		<h1>Django Image Uploading</h1>
 			<ul>
-			  {% for Upload in object_list %}
-				<h2>{{ Upload.title }}</h2>
-				<img src="{{ Upload.image.url }}" alt="{{ Upload.title }}">
+			  {% for post in object_list %}
+				<h2>{{ post.title }}</h2>
+				<img src="{{ post.image.url }}" alt=""{{ post.title }}/>
 			  {% endfor %}
 			</ul>
+
 
 	</aside>
 	
