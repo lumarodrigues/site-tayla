@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,22 +8,25 @@
 	<meta name="author" content="pixelhint.com">
 	<meta name="description" content="Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website template"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+	<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}" />
+
 </head>
 <body>
 
 	<header>
 		<div class="logo" id="logo">
-			<a href="index.html"><img src="img/logo-tayla.png" height="70%" width="70%"/></a>
-		</div><!-- end logo -->
+			<a href=""><img src="{% static 'img/logo-tayla.png' %}"/></a>
+		</div>
 
 		<div id="menu"></div>
 		<nav>
 			<ul>
-				<li><a href="index.html" class="selected">Home</a></li>
+				<li><a href="">Home</a></li>
 				<li><a href="">Storyboard</a></li>
 				<li><a href="">Characters</a></li>
 				<li><a href="">Props</a></li>
@@ -30,7 +35,7 @@
 				<li><a href="#">Resumé</a></li>
 				<li><a href="#">Contact</a></li>
 			</ul>
-		</nav><!-- end navigation menu -->
+		</nav>
 
 
 		<div id="social">
@@ -38,20 +43,20 @@
 			<ul>
 	
 				<li><a href="https://www.instagram.com/taylabelinot" target="_blank">
-					<img alt="Logo" src="img/instagram.png" name='instagram-logo' width="40" height="40">
+					<img alt="Logo" src="{% static 'img/instagram.png' %}" name='instagram-logo' width="40" height="40">
 				</a></li>
 	
 				<li><a href="https://www.twitter.com/taylabelinot" target="_blank">
-					<img alt="Logo" src="img/twitter.png" name='twitter-logo' width="40" height="40">
+					<img alt="Logo" src="{% static 'img/twitter.png' %}" name='twitter-logo' width="40" height="40">
 				</a></li>
 	
 				<li><a href="https://www.facebook.com/tayla.belinot" target="_blank">
-					<img alt="Logo" src="img/facebook.png" name='facebook-logo' width="40" height="40">
+					<img alt="Logo" src="{% static 'img/facebook.png' %}" name='facebook-logo' width="40" height="40">
 				</a></li>
 	
 	
 				<li><a href="https://br.linkedin.com/in/tayla-belinot-69322165" target="_blank">
-					<img alt="Logo" src="img/linkedin.png" name='linkedin-logo' width="40" height="40">
+					<img alt="Logo" src="{% static 'img/linkedin.png' %}" name='linkedin-logo' width="40" height="40">
 				</a></li>
 			</ul>
 	
@@ -66,106 +71,33 @@
 
 	</header><!-- end header -->
 
-	<section class="main">
-		<div class="work">
-			<a href="inner.html">
-				<img src="img/foto1.jpg" class="media" alt=""/>
-				<div class="caption">
-					<div class="work_title">
-						<h1>culpa qui officia deserunt mollit</h1>
-					</div>
-				</div>
-			</a>
+	<aside id="portfolio">
+
+		<div id="images_portfolio">
+			<img src="{% static 'img/1.jpg' %}" width="50%"/>
+			<img src="{% static 'img/2.jpg' %}" width="50%"/>
+			<img src="{% static 'img/3.png' %}" width="50%"/>
+			<img src="{% static 'img/4.png' %}" width="50%"/>
+			<img src="{% static 'img/5.jpg' %}" width="50%"/>
+			<img src="{% static 'img/6.png' %}" width="50%"/>
+			<img src="{% static 'img/7.png' %}" width="50%"/>
+			<img src="{% static 'img/8.png' %}" width="50%"/>
+			<img src="{% static 'img/9.png' %}" width="50%"/>
+			<img src="{% static 'img/10.png' %}" width="50%"/>
+			<img src="{% static 'img/11.png' %}" width="50%"/>
 		</div>
 
-		<div class="work">
-			<a href="inner.html">
-				<img src="img/foto2.png" class="media" alt=""/>
-				<div class="caption">
-					<div class="work_title">
-						<h1>culpa qui officia deserunt mollit</h1>
-					</div>
-				</div>
-			</a>
-		</div>
+<!---
+		<h1>Django Image Uploading</h1>
+			<ul>
+			  {% for Upload in object_list %}
+				<h2>{{ Upload.title }}</h2>
+				<img src="{{ Upload.image.url }}" alt=""{{ Upload.title }} width="50%"/>
+			  {% endfor %}
+			</ul>
 
-		<div class="work">
-			<a href="inner.html">
-				<img src="img/foto3.png" class="media" alt=""/>
-				<div class="caption">
-					<div class="work_title">
-						<h1>culpa qui officia deserunt mollit</h1>
-					</div>
-				</div>
-			</a>
-		</div>
-
-		<div class="work">
-			<a href="inner.html">
-				<img src="img/foto4.jpg" class="media" alt=""/>
-				<div class="caption">
-					<div class="work_title">
-						<h1>culpa qui officia deserunt mollit</h1>
-					</div>
-				</div>
-			</a>
-		</div>
-
-		<div class="work">
-			<a href="inner.html">
-				<img src="img/foto5.jpg" class="media" alt=""/>
-				<div class="caption">
-					<div class="work_title">
-						<h1>culpa qui officia deserunt mollit</h1>
-					</div>
-				</div>
-			</a>
-		</div>
-
-		<div class="work">
-			<a href="inner.html">
-				<img src="img/foto1.jpg" class="media" alt=""/>
-				<div class="caption">
-					<div class="work_title">
-						<h1>culpa qui officia deserunt mollit</h1>
-					</div>
-				</div>
-			</a>
-		</div>
-
-		<div class="work">
-			<a href="inner.html">
-				<img src="img/foto2.png" class="media" alt=""/>
-				<div class="caption">
-					<div class="work_title">
-						<h1>culpa qui officia deserunt mollit</h1>
-					</div>
-				</div>
-			</a>
-		</div>
-
-		<div class="work">
-			<a href="inner.html">
-				<img src="img/foto3.png" class="media" alt=""/>
-				<div class="caption">
-					<div class="work_title">
-						<h1>culpa qui officia deserunt mollit</h1>
-					</div>
-				</div>
-			</a>
-		</div>
-
-		<div class="work">
-			<a href="inner.html">
-				<img src="img/foto4.jpg" class="media" alt=""/>
-				<div class="caption">
-					<div class="work_title">
-						<h1>culpa qui officia deserunt mollit</h1>
-					</div>
-				</div>
-			</a>
-		</div>
-	</section><!-- end main -->
+-->
+	</aside>
 	
 </body>
 </html>

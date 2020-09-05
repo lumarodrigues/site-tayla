@@ -16,7 +16,7 @@
 	<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}" />
 
 </head>
-<body>
+	<body>
 
 	<header>
 		<div class="logo" id="logo">
@@ -41,49 +41,56 @@
 		<div id="social">
 
 			<ul>
-	
+
 				<li><a href="https://www.instagram.com/taylabelinot" target="_blank">
 					<img alt="Logo" src="{% static 'img/instagram.png' %}" name='instagram-logo' width="40" height="40">
 				</a></li>
-	
+
 				<li><a href="https://www.twitter.com/taylabelinot" target="_blank">
 					<img alt="Logo" src="{% static 'img/twitter.png' %}" name='twitter-logo' width="40" height="40">
 				</a></li>
-	
+
 				<li><a href="https://www.facebook.com/tayla.belinot" target="_blank">
 					<img alt="Logo" src="{% static 'img/facebook.png' %}" name='facebook-logo' width="40" height="40">
 				</a></li>
-	
-	
+
+
 				<li><a href="https://br.linkedin.com/in/tayla-belinot-69322165" target="_blank">
 					<img alt="Logo" src="{% static 'img/linkedin.png' %}" name='linkedin-logo' width="40" height="40">
 				</a></li>
 			</ul>
-	
+
 		</div>
-		
-		<!-- <div class="footer clearfix">
-			<div class="rights">
-				<p>Copyright © 2014 magnetic.</p>
-				<p>Template by <a href="">Pixelhint.com</a></p>
-			</div>
-		</div >-->
-
-	</header><!-- end header -->
-
-	<aside id="portfolio">
 
 
-		<h1>Django Image Uploading</h1>
-			<ul>
-			  {% for post in object_list %}
-				<h2>{{ post.title }}</h2>
-				<img src="{{ post.image.url }}" alt=""{{ post.title }}/>
-			  {% endfor %}
-			</ul>
+	</header>
 
+	<div class="gallery">
+		<div class="row">
+		  <div class="column">
+						<img src="{% static 'img/1.jpg' %}"/>
+						<img src="{% static 'img/2.jpg' %}"/>
+						<img src="{% static 'img/3.png' %}"/>
+						<img src="{% static 'img/4.png' %}"/>
+						<img src="{% static 'img/9.png' %}"/>
+		  </div>
+		  <div class="column">
 
-	</aside>
+						<img src="{% static 'img/5.jpg' %}"/>
+						<img src="{% static 'img/6.png' %}"/>
+						<img src="{% static 'img/10.png' %}"/>
+
+		  </div>
+		  <div class="column">
+						<img src="{% static 'img/7.png' %}"/>
+
+						<img src="{% static 'img/8.png' %}"/>
+
+						<img src="{% static 'img/11.png' %}"/>
+		  </div>
+		</div>
+	</div>
+
 	
 </body>
 </html>
