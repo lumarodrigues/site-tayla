@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>{% block title %}Tayla Belinot{% endblock title %}</title>
+	<meta charset="utf-8">
+	<meta name="author" content="pixelhint.com">
+	<meta name="description" content="Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website template"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+	<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}" />
+
+</head>
+	<body>
+
+	<header>
+		<div id="logo">
+			<a href="home/"><img src="{% static 'img/logo-tayla.png' %}"/></a>
+		</div><!-- end logo -->
+
+		<div id="menu">
+		<nav>
+			<ul>
+				<li><a href="home/" class="selected">Home</a></li>
+				<!--<li><a href="">Storyboard</a></li>
+				<li><a href="">Characters</a></li>
+				<li><a href="">Props</a></li>-->
+				<li><a href="sketchbook/">Sketchbook</a></li>
+				<li><a href="about_me/">About Me</a></li>
+				<!--<li><a href="">Resume</a></li>-->
+				<li><a href="" class="selected">Contact</a></li>
+			</ul>
+		</nav><!-- end navigation menu -->
+		</div>
+
+		<div id="social">
+
+			<ul>
+
+				<li><a href="https://www.instagram.com/taylabelinot" target="_blank">
+					<img alt="Logo" src="{% static 'img/instagram.png' %}" name='instagram-logo' width="40" height="40">
+				</a></li>
+
+				<li><a href="https://www.twitter.com/taylabelinot" target="_blank">
+					<img alt="Logo" src="{% static 'img/twitter.png' %}" name='twitter-logo' width="40" height="40">
+				</a></li>
+
+				<li><a href="https://www.facebook.com/tayla.belinot" target="_blank">
+					<img alt="Logo" src="{% static 'img/facebook.png' %}" name='facebook-logo' width="40" height="40">
+				</a></li>
+
+
+				<li><a href="https://br.linkedin.com/in/tayla-belinot-69322165" target="_blank">
+					<img alt="Logo" src="{% static 'img/linkedin.png' %}" name='linkedin-logo' width="40" height="40">
+				</a></li>
+			</ul>
+
+		</div>
+
+
+
+	</header>
+
+	{% block body %}
+
+	{% endblock body %}
+
+</body>
+</html>

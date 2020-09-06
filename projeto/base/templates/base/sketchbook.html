@@ -1,0 +1,49 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Tayla Belinot - Sketchbook{% endblock title %}</title>
+</head>
+<body>
+
+{% block body %}
+	<div class="gallery">
+		<div class="row">
+		  <div class="column">
+						<img src="{% static 'img/sketchbook/box capa 8.jpg' %}"/>
+						<img src="{% static 'img/sketchbook/box character 2.jpg' %}"/>
+						<img src="{% static 'img/sketchbook/cermit.png' %}"/>
+						<img src="{% static 'img/sketchbook/estudo de foto menor.png' %}"/>
+						<img src="{% static 'img/sketchbook/stag.png' %}"/>
+			  		    <img src="{% static 'img/sketchbook/graveyard page 3.jpg' %}"/>
+		  </div>
+		  <div class="column">
+
+						<img src="{% static 'img/sketchbook/GURL.gif' %}"/>
+						<img src="{% static 'img/sketchbook/hangedwoman sketch.png' %}"/>
+						<img src="{% static 'img/sketchbook/head studies 2.jpg' %}"/>
+			  			<img src="{% static 'img/sketchbook/himbo 2.0.jpg' %}"/>
+			  			<img src="{% static 'img/sketchbook/i missed you.jpg' %}"/>
+			  			<img src="{% static 'img/sketchbook/leyendecker study 2.3.jpg' %}"/>
+
+		  </div>
+		  <div class="column">
+						<img src="{% static 'img/sketchbook/mãos 2.jpg' %}"/>
+						<img src="{% static 'img/sketchbook/mãos.jpg' %}"/>
+						<img src="{% static 'img/sketchbook/maozinha 2.png' %}"/>
+			  			<img src="{% static 'img/sketchbook/maozinha.png' %}"/>
+			  			<img src="{% static 'img/sketchbook/Organized thumbs.jpg' %}"/>
+			  			<img src="{% static 'img/sketchbook/galinha girando COLORIDO.gif' %}"/>
+
+		  </div>
+		</div>
+	</div>
+
+{% endblock body %}
+
+</body>
+</html>
