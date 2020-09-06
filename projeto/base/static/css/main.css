@@ -10,18 +10,19 @@
 
 /*  General CSS*/
 body{
-    background: black;
+    background: white;
 }
 
 
 /*  Header  */
 
-div#menu{
+div#menu {
 
     position: relative;
-    bottom: 50px;
+    bottom: 0px;
     left: 0px;
     text-align: center;
+    letter-spacing: 5px;
 
 }
 
@@ -32,45 +33,74 @@ div#menu ul {
     list-style: none;
     padding: 20px;
     text-align: center;
+    text-decoration: none;
+
+}
+
+div#social {
+
+    display: block;
+    position: relative;
+    bottom: 0px;
+    align-content: center;
+
+}
+
+div#social ul {
+
+    list-style: none;
+    padding: 0px;
+    align: center;
+
+}
+
+div#social li {
+
+    display: inline-block;
+    align-content: center
 
 }
 
 @media (min-width: 1000px){
-    header{
+    header {
+
         display: block;
         position: fixed;
-        top: 0;
-        left: 0;
+        top: 0%;
+        left: 0%;
         min-height: 100%;
         background: #000000;
         float: left;
         overflow: hidden;
         z-index: 9999;
+
     }
 
-    header .logo{
+    header .logo {
 
         margin-top: 0px;
         align: center;
 
     }
 
-    header nav ul{
+    header menu nav ul {
+
         display: block;
         overflow: hidden;
         margin-top: 0px;
         list-style: none;
+        text-decoration: none;
 
     }
 
-    header nav ul li {
+    header menu nav ul li {
 
         display: list-item;
-        margin-bottom: 10px;
+
 
     }
 
-    header nav ul li a {
+    header menu nav ul li a {
         color: #454545;
         font-family: 'Architect';
         font-size: 20px;
@@ -78,6 +108,7 @@ div#menu ul {
         letter-spacing: 5px;
         text-align: center;
     }
+
 
 
 }
@@ -99,35 +130,13 @@ a:hover {
 
 /*header social media*/
 
-div#social {
 
-    display: block;
-    position: relative;
-    bottom: 0px;
-    align-content: center;
-
-}
-
-div#social ul {
-
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
-    align-items: center;
-
-}
-
-div#social li {
-
-    display: inline-block;
-
-}
 /*-------------------*/
 
 .gallery {
 
     position: absolute;
-    left: 200px;
+    left: 17%;
     width: 100%;
 
 }
@@ -135,18 +144,19 @@ div#social li {
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 0px;
 }
 
 /* Create four equal columns that sits next to each other */
 .column {
   flex: 25%;
   max-width: 25%;
-  padding: 0 4px;
+  padding: 0 0px;
+  margin-top: 0.2%;
 }
 
 .column img {
-  margin-top: 8px;
+  margin-top: 0px;
   vertical-align: middle;
   width: 100%;
 }

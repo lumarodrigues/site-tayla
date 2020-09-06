@@ -1,95 +1,35 @@
+{% extends 'base/base.html' %}
+
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<title>Tayla Belinot</title>
-	<meta charset="utf-8">
-	<meta name="author" content="pixelhint.com">
-	<meta name="description" content="Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website template"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-
-	<link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
-	<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}" />
-
-</head>
-	<body>
-
-	<header>
-		<div class="logo" id="logo">
-			<a href=""><img src="{% static 'img/logo-tayla.png' %}" height="70%" width="70%"/></a>
-		</div><!-- end logo -->
-
-		<div id="menu"></div>
-		<nav>
-			<ul>
-				<li><a href="" class="selected">Home</a></li>
-				<li><a href="">Storyboard</a></li>
-				<li><a href="">Characters</a></li>
-				<li><a href="">Props</a></li>
-				<li><a href="">Sketchbook</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Resumé</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
-		</nav><!-- end navigation menu -->
-
-
-		<div id="social">
-
-			<ul>
-
-				<li><a href="https://www.instagram.com/taylabelinot" target="_blank">
-					<img alt="Logo" src="{% static 'img/instagram.png' %}" name='instagram-logo' width="40" height="40">
-				</a></li>
-
-				<li><a href="https://www.twitter.com/taylabelinot" target="_blank">
-					<img alt="Logo" src="{% static 'img/twitter.png' %}" name='twitter-logo' width="40" height="40">
-				</a></li>
-
-				<li><a href="https://www.facebook.com/tayla.belinot" target="_blank">
-					<img alt="Logo" src="{% static 'img/facebook.png' %}" name='facebook-logo' width="40" height="40">
-				</a></li>
-
-
-				<li><a href="https://br.linkedin.com/in/tayla-belinot-69322165" target="_blank">
-					<img alt="Logo" src="{% static 'img/linkedin.png' %}" name='linkedin-logo' width="40" height="40">
-				</a></li>
-			</ul>
-
-		</div>
-
-
-	</header>
-
+{% block body %}
 	<div class="gallery">
 		<div class="row">
 		  <div class="column">
-						<img src="{% static 'img/1.jpg' %}"/>
+						<img src="{% static 'img/12.png' %}"/>
+						<img src="{% static 'img/10.png' %}"/>
+						<img src="{% static 'img/8.png' %}"/>
 						<img src="{% static 'img/2.jpg' %}"/>
-						<img src="{% static 'img/3.png' %}"/>
-						<img src="{% static 'img/4.png' %}"/>
-						<img src="{% static 'img/9.png' %}"/>
 		  </div>
 		  <div class="column">
 
-						<img src="{% static 'img/5.jpg' %}"/>
+						<img src="{% static 'img/1.jpg' %}"/>
 						<img src="{% static 'img/6.png' %}"/>
-						<img src="{% static 'img/10.png' %}"/>
+						<img src="{% static 'img/11.png' %}"/>
 
 		  </div>
 		  <div class="column">
 						<img src="{% static 'img/7.png' %}"/>
+			  			<img src="{% static 'img/5.jpg' %}"/>
+			  			<img src="{% static 'img/9.png' %}"/>
+			  			<img src="{% static 'img/3.png' %}"/>
+						<img src="{% static 'img/4.png' %}"/>
 
-						<img src="{% static 'img/8.png' %}"/>
-
-						<img src="{% static 'img/11.png' %}"/>
 		  </div>
 		</div>
 	</div>
+
+{% endblock body %}
 
 	
 </body>

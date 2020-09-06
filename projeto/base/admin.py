@@ -195,6 +195,3 @@ class UserAdmin(admin.ModelAdmin):
         return super().response_add(request, obj, post_url_continue)
 
 
-from .models import Upload
-
-admin.site.register(Upload)

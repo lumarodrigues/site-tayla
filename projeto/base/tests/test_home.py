@@ -11,13 +11,13 @@ def resp(client):
     return resp
 
 
-@pytest.mark.django_db
 def test_status_code(resp):
     assert resp.status_code == 200
 
 
-@pytest.mark.django_db
 def test_title(resp):
     assert_contains(resp, '<title>Tayla Belinot</title>')
 
 
+def test_gallery(resp):
+    assert_contains(resp, '<div class="gallery">')
