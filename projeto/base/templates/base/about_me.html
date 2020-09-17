@@ -1,69 +1,100 @@
 {% extends 'base/base.html' %}
 
+{% load static %}
 
 {% block title %}
 Tayla Belinot - About Me
 {% endblock title %}
 
 {% block body %}
-    <div id="paragraph">
+    <div class="paragraph">
+        <br>
+
+        <img alt="Tayla" src="{% static 'img/tayla.png' %}" name='tayla'>
+        <img class="realtayla" alt="RealTayla" src="{% static 'img/real_tayla.png' %}" name='realtayla'>
 
         <h1>About Me</h1>
-        <p>
-            Hey there! My name is Tayla and my favorite thing in the world is telling stories through art! Right now I'm a freelancer based in Brazil with interests in working and studying abroad.
-        I'm always experimenting with different forms of digital media; illustration, comics, animation, you name it! I like to use bold colors and lights to find new and interesting directions to art.
-        I have a degree in architecture from Universidade Federal do Rio de Janeiro, which helped me gain an understanding on how to compose a scene and convey depth through my linework.
-        I've been in love with art, animation, and comics for as long as I can remember. If I can bring a bit of mischievous energy to what I do then I will, because if it makes me giggle it's worth doing!
-        </p>
+        <p class="about">
+            Hey there!
+            <br>
+            <br>
+            My name is Tayla and my favorite thing in the world is telling stories through art! Right now I'm a freelancer
+            based in Brazil with interests in working and studying abroad.
+            <br>
+            <br>
+            I'm always experimenting with different forms of digital media; illustration, comics, animation, you name it!
+            I like to use bold colors and lights to find new and interesting directions to art.
+            <br>
+            <br>
+            I have a degree in architecture from Universidade Federal do Rio de Janeiro, which helped me gain an understanding
+            on how to compose a scene and convey depth through my linework.
+            <br>
+            <br>
+            I've been in love with art, animation, and comics for as long as I can remember. If I can bring a bit of mischievous
+            energy to what I do then I will, because if it makes me giggle it's worth doing!
 
+
+            <br>
+            <br>
+        </p>
+        <hr class="solid">
+
+        <br>
         <h1>Events I’ve been part of:</h1>
 
-        <ul>Feira da providência 2019
-
-        Ressaca Friends São Paulo 2019
-
-        Salão Carioca do Livro (LER) 2019
-
-        Feira independente de Qualquer Coisa 2019</ul>
-
-
+        <ul class="new_ul">
+            <li>Feira da Providência: 2019</li>
+<br>
+            <li>Ressaca Friends São Paulo: 2019</li>
+<br>
+            <li>Salão Carioca do Livro (LER): 2019</li>
+<br>
+            <li>Feira independente de Qualquer Coisa: 2019</li></ul>
+        <br>
+        <br>
         <h1>Learning stuff and all that:</h1>
 
-         <ul>Quanta Art Academy, Storyboard Online Summer Course 2020
-
-          Quanta Art Academy, Digital Animation Fundamentals Online Summer Course 2020
-
-          Udemy, Complete course for Clip Studio Paint Illustration 2019
-
-          Universidade Federal do Rio de Janeiro, bachelor degree in architecture and urbanism 2018
+        <ul class="new_ul"><li>Quanta Art Academy, Storyboard Online Summer Course: 2020</li>
+<br>
+            <li>Quanta Art Academy, Digital Animation Fundamentals Online Summer Course: 2020</li>
+<br>
+            <li>Udemy, Complete course for Clip Studio Paint Illustration: 2019</li>
+<br>
+            <li>Universidade Federal do Rio de Janeiro, bachelor degree in architecture and urbanism: 2018</li>
          </ul>
-
-
+        <br>
+        <br>
         <h1>Stuff I did:</h1>
 
-         <ul>Freelance Illustrator, Self Employed 2019 - present
-
-         Monitora de Análise Urbana e da Paisagem 2016 - 2017
-
-         Freelance Interior designer 2015
-
-         Freelance Character Designer for Brazil Games 2014
+        <ul class="new_ul"><li>Freelance Illustrator, Self Employed: 2019 - present</li>
+<br>
+            <li>Monitora de Análise Urbana e da Paisagem: 2016 - 2017</li>
+<br>
+            <li>Freelance Interior designer: 2015</li>
+<br>
+            <li>Freelance Character Designer for Brazil Games: 2014</li>
          </ul>
+
+        <br>
+        <br>
+        <br>
+
+
+
+
 
     </div>
 
-<!--	<footer>
 
-	    <div class="col">
+
+<!---    <footer class="footer">
+
+	    <div class="all_rights">
+
     	    {% now 'Y' %} All images copyright by Tayla Belinot, 2017 - 2020.
+
         </div>
 
-	</footer> -->
+	</footer>-->
 
 {% endblock body %}
-
-</body>
-
-
-
-</html>

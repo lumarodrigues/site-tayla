@@ -8,112 +8,88 @@
 }
 
 
+@font-face {
+
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat-Regular.ttf");
+
+}
+
+
 /*  General CSS*/
 body{
-    background: white;
-}
 
-
-/*  Header  */
-
-div#menu {
-
-    position: relative;
-    bottom: 0px;
-    left: 0px;
-    text-align: center;
-    letter-spacing: 5px;
+    background: #000000;
+    overflow-x: hidden;
 
 }
 
-div#menu ul {
 
-    font-family: 'Architect';
-    font-size: 18pt;
-    list-style: none;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-
-}
-
-div#social {
+header {
 
     display: block;
-    position: relative;
-    bottom: 0px;
-    align-content: center;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    min-height: 100%;
+    background: #000000;
+    z-index: 1;
 
 }
 
-div#social ul {
+div.logo img {
 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+}
+
+
+div.menu {
+
+    position: relative;
+    text-align: center;
+    font-family: 'Architect';
+
+}
+
+div.menu nav ul {
+
+    font-size: 18pt;
     list-style: none;
     padding: 0px;
-    align: center;
+    text-align: center;
+    margin-top: 10px;
 
 }
 
-div#social li {
+div.menu nav ul li {
 
-    display: inline-block;
-    align-content: center
-
-}
-
-@media (min-width: 1000px){
-    header {
-
-        display: block;
-        position: fixed;
-        top: 0%;
-        left: 0%;
-        min-height: 100%;
-        background: #000000;
-        float: left;
-        overflow: hidden;
-        z-index: 9999;
-
-    }
-
-    header .logo {
-
-        margin-top: 0px;
-        align: center;
-
-    }
-
-    header menu nav ul {
-
-        display: block;
-        overflow: hidden;
-        margin-top: 0px;
-        list-style: none;
-        text-decoration: none;
-
-    }
-
-    header menu nav ul li {
-
-        display: list-item;
-
-
-    }
-
-    header menu nav ul li a {
-        color: #454545;
-        font-family: 'Architect';
-        font-size: 20px;
-        text-decoration: none;
-        letter-spacing: 5px;
-        text-align: center;
-    }
-
-
+    padding: 2%;
 
 }
 
-/*-------------------*/
+div.menu nav ul li a {
+
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-family: 'Architect';
+    font-size: 20px;
+
+}
+
+div.copyright {
+
+    font-family: 'Montserrat';
+    font-size: 7pt;
+    position: relative;
+    bottom: 0px;
+    color: #D6B9D7;
+    text-align: center;
+
+}
 
 /* link colors */
 
@@ -124,20 +100,33 @@ a:link, a:visited, a:active {
 
 a:hover {
 
-    color: #FFFF00;
+    color: #D6B9D7;
 
 }
 
-/*header social media*/
+
+div.social ul {
+
+    position: relative;
+    text-align: center;
+    padding: 15px;
+
+}
 
 
-/*-------------------*/
+div.social ul li {
+
+    display: inline-block;
+    list-style: none;
+
+}
+
 
 .gallery {
 
-    position: absolute;
+    position: relative;
     left: 17%;
-    width: 100%;
+    width: 110%;
 
 }
 
@@ -161,13 +150,374 @@ a:hover {
   width: 100%;
 }
 
+
+
+div.paragraph {
+
+    color: #FF69B4;
+
+}
+
+div.paragraph h1, p.about, ul.new_ul {
+
+    font-family: 'Montserrat';
+    position: relative;
+    left: 20%;
+    padding: 10px;
+    font-size: 16px;
+    width: 75%;
+    word-wrap: break-word;
+    color: #D6B9D7;
+
+}
+
+div.paragraph h1 {
+
+    font-size: 20px;
+    color: #FF7BAC;
+
+}
+
+div.paragraph, p.about {
+
+    font-family: 'Montserrat';
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 130%;
+
+}
+
+div.paragraph, a, h1 {
+
+    font-family: 'Montserrat';
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 0px;
+    position: relative;
+    align: center;
+
+}
+
+div.paragraph ul li {
+
+    margin-left: 2%;
+
+}
+
+
+div.paragraph img {
+
+    position: relative;
+    left: 18%;
+    padding: 10px;
+    width: 280px;
+    float: left;
+    z-index: 1;
+
+}
+
+
+
+.paragraph .realtayla {
+    visibility: hidden;
+    position: absolute;
+    left: 18%;
+
+}
+
+.paragraph:hover .realtayla {
+    visibility: visible;
+    opacity: 1;
+    transition: 1s;
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 1px dashed #D6B9D7;
+}
+
+
+div.contact {
+
+    font-family: 'Montserrat';
+    font-size: 18px;
+    text-decoration: none;
+    letter-spacing: 4px;
+    position: relative;
+    left: 20%;
+    padding: 5px;
+    color: #FF7BAC;
+
+}
+
+
+
+div.contact h1, a.social2, p {
+
+    font-family: 'Montserrat';
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 0px;
+    position: relative;
+    margin-top: 10px;
+    left: 16%;
+    color: #D6B9D7;
+
+}
+
+div.contact h1.contact_me {
+
+    color: #FF7BAC;
+
+}
+
+div.contact h1 {
+
+    padding: 5px;
+    color: #FFFF00;
+    left: 16%;
+
+}
+
+
+div.contact h2 {
+
+    position: relative;
+    color: #D6B9D7;
+    left: 16.3%;
+    letter-spacing: 0px;
+
+}
+
+div.contact h2.com {
+
+    left: 0%;
+    top: 0%;
+
+}
+
+
+div.contact img {
+
+    position: relative;
+    left: 16%;
+
+}
+
+div.contact img.code {
+
+    position: absolute;
+    float: left;
+    left: 0%;
+    top: 5%;
+
+}
+
+ /* Style the Image Used to Trigger the Modal */
+.myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 10px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
-    flex: 50%;
-    max-width: 50%;
+    flex: 100%;
+    max-width: 100%;
   }
+
+   header {
+
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    background: #000000;
+    z-index: 0;
+
+
+   }
+
+   .gallery {
+
+    left: 0%;
+    width: 100%;
+
+   }
+
+    .row {
+
+      padding: 5px;
+
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+
+      padding: 5 5px;
+
+    }
+
+    .column img {
+
+      margin-top: 5px;
+
+    }
+
+
+    div.paragraph h1, p, ul.new_ul {
+
+        position: relative;
+        left: 2%;
+
+    }
+
+
+    div.paragraph, a, h1 {
+
+        position: relative;
+        align: center;
+
+    }
+
+
+    div.paragraph img {
+
+        position: relative;
+        left: 0%;
+
+    }
+
+
+    .paragraph .real_tayla {
+
+    position: absolute;
+    left: 0%;
+
 }
+
+
+
+
+    div.contact {
+
+        position: relative;
+        left: 0%;
+
+    }
+
+    div.contact img {
+
+        display: inline-block;
+        align: center;
+
+    }
+
+
+}
+
+
+
+
+
+
+
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
