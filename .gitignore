@@ -133,4 +133,4 @@ staticfiles/
 mediafiles/
 
 # postgres files for local development
-.pgdatas
+.pgdata

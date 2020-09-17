@@ -9,7 +9,7 @@ services:
       - ./.pgdata:/var/lib/posgresql/data
     environment:
       - LC_ALL=C.UTF-8
-      - POSTGRES_PASSWORD=tlps2s2
+      - POSTGRES_PASSWORD=site-tayla
       - POSTGRES_USER=site-tayla
     ports:
       - 5434:5432

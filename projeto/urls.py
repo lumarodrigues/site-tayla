@@ -17,15 +17,18 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 
-from projeto.base.views import home, about_me, sketchbook
+from projeto.base.views import home, about_me, sketchbook, contact_me
 
 urlpatterns = [
+
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('home/', home, name='home'),
     path('about_me/', about_me, name='about_me'),
     path('sketchbook/', sketchbook, name='sketchbook'),
-    ]
+    path('contact_me/', contact_me, name='contact_me'),
+
+]
 
 if settings.DEBUG:
     import debug_toolbar
