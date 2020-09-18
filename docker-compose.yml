@@ -2,11 +2,11 @@ version: "3.3"
 
 services:
   database:
-    container_name: site-tayla_database
+    container_name: site-tayla
     image: postgres
     restart: always
     volumes:
-      - ./.pgdata:/var/lib/posgresql/data
+      - ./.pgdata:/var/lib/postgresql/data
     environment:
       - LC_ALL=C.UTF-8
       - POSTGRES_PASSWORD=site-tayla
