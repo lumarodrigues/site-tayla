@@ -43,13 +43,15 @@ Tayla Belinot - Contact Me
 
 </div>
 
-{% endblock body %}
     <form method="POST">
-            {% crsf token %}
-        <table border="1">
+            {% csrf_token %}
+        <table border="1" class="form">
             {{form}}
         </table>
-        <input type="submit" value="Enviar"/>
+        <input type="submit" value="Submit" class="button"/>
     </form>
+
+{% endblock body %}
+
 
 
