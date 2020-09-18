@@ -42,4 +42,14 @@ Tayla Belinot - Contact Me
 
 
 </div>
+
 {% endblock body %}
+    <form method="POST">
+            {% crsf token %}
+        <table border="1">
+            {{form}}
+        </table>
+        <input type="submit" value="Enviar"/>
+    </form>
+
+
