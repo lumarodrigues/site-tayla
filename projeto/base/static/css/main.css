@@ -17,9 +17,9 @@
 
 
 /*  General CSS*/
-body{
+body {
 
-    background: white;
+    background: black;
     overflow-x: hidden;
 
 }
@@ -317,6 +317,10 @@ table.form {
 
     position: relative;
     left: 18%;
+    font-family: 'Montserrat';
+    display: block;
+    margin: 1%;
+    color: #D6B9D7;
 
 
 }
@@ -325,7 +329,8 @@ input.button {
 
     position: relative;
     left: 18%;
-
+    padding: 1%;
+    margin-top: 1%;
 
 }
 
@@ -446,7 +451,7 @@ input.button {
     left: 0%;
     width: 100%;
     background: #000000;
-    z-index: 0;
+    z-index: 1;
 
 
    }
@@ -478,36 +483,35 @@ input.button {
     }
 
 
-    div.paragraph h1, p, ul.new_ul {
+    div.paragraph h1, ul.new_ul {
 
         position: relative;
-        left: 2%;
+        left: 5%;
 
     }
 
 
-    div.paragraph, a, h1 {
+
+    div.paragraph p {
 
         position: relative;
-        align: center;
+        left: 5%;
 
     }
 
-
-    div.paragraph img {
+    div.paragraph img.tayla {
 
         position: relative;
         left: 0%;
 
     }
 
+    div.paragraph img.realtayla {
 
-    .paragraph .real_tayla {
+        position: absolute;
+        left: 0%;
 
-    position: absolute;
-    left: 0%;
-
-}
+    }
 
 
 
@@ -519,18 +523,70 @@ input.button {
 
     }
 
+    div.contact h1, a.social2, p {
+
+        position: relative;
+        left: 0%;
+
+
+    }
+
+
+    div.contact h1 {
+
+        left: 0%;
+
+    }
+
+
+    div.contact h2 {
+
+        position: relative;
+        left: 0.3%;
+
+    }
+
+
+    div.contact h2.com {
+
+        left: 0%;
+        top: 0%;
+
+    }
+
+
     div.contact img {
 
-        display: inline-block;
+        position: relative;
+        left: 0%;
+
+    }
+
+    div.contact img.code {
+
+        position: relative;
         align: center;
+
+    }
+
+    table.form {
+
+        position: relative;
+        left: 0%;
+
+    }
+
+    input.button {
+
+        position: relative;
+        left: 0%;
+        margin-left: 1%;
+        margin-bottom: 1%;
 
     }
 
 
 }
-
-
-
 
 
 

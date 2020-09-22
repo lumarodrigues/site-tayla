@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from projeto.forms import ContactForm
 from django.core.mail import send_mail
+from projeto.settings import EMAIL_HOST_USER
 
 
 def home(request):
@@ -21,8 +22,9 @@ def contact_me(request):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
+            subject = form.cleaned_data['subject']
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
-            send_mail('', message, email, ['rdsluma@gmail.com', email])
+            send_mail(subject, message, email, [EMAIL_HOST_USER], fail_silently=False)
     return render(request, 'base/contact_me.html', {'form': form})
