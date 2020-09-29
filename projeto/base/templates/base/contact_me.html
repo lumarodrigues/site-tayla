@@ -43,15 +43,34 @@ Tayla Belinot - Contact Me
 
 </div>
 
-    <form method="POST">
-            {% csrf_token %}
-        <table border="1" class="form">
-            {{form}}
-        </table>
-        <input type="submit" value="Submit" class="button"/>
-    </form>
+{% if message %}
+	<div class='thanks'>
+		<h2>Thank you for contacting me!
+		<br>
+		    I'll answer you as soon as possible.
+		<br>
+		    Obrigada!</h2>
+	</div>
+{% else %}
+    <div class="form">
+        <form action="{% url 'contact_me' %}" method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-lg-6">
+                <input type="text" name="message-name" class="form-control mb-30" placeholder="Your Name">
+            </div>
+            <div class="col-lg-6">
+                <input type="text" name="message-email" class="form-control mb-30" placeholder="Your E-mail">
+            </div>
+            <div class="col-12">
+                <textarea name="message" class="form-control mb-30" placeholder="Your Message"></textarea>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="button">Send Message</button>
+            </div>
+        </div>
+        </form>
+    </div>
+{% endif %}
 
 {% endblock body %}
-
-
-
