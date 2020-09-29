@@ -17,14 +17,12 @@ def sketchbook(request):
 
 
 def contact_me(request):
-    if request.method == 'GET':
-        form = ContactForm()
+    if request.method == "POST":
+        message_name = request.POST['message-name']
+        message_email = request.POST['message-email']
+        message = request.POST['message']
+        send_mail(message_name, message, message_email, [EMAIL_HOST_USER], fail_silently=False)
+
+        return render(request, 'base/contact_me.html', {'message_name': message_name})
     else:
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            subject = form.cleaned_data['subject']
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-            message = form.cleaned_data['message']
-            send_mail(subject, message, email, [EMAIL_HOST_USER], fail_silently=False)
-    return render(request, 'base/contact_me.html', {'form': form})
+        return render(request, 'base/contact_me.html', {})
