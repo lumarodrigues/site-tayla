@@ -16,9 +16,12 @@ python-decouple = "*"
 dj-database-url = "*"
 collectfast = "*"
 django-s3-folder-storage = "*"
-psycopg2-binary = "*"
+psycopg2-binary = "==2.8.5"
 django-debug-toolbar = "*"
 pillow = "*"
+pytest = "*"
+pytest-django = "*"
+setuptools = "*"
 
 [requires]
 python_version = "3.8"
