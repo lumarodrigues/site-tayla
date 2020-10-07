@@ -313,26 +313,108 @@ div.contact img.code {
 
 }
 
-table.form {
+
+
+div.form {
 
     position: relative;
-    left: 18%;
-    font-family: 'Montserrat';
-    display: block;
-    margin: 1%;
-    color: #D6B9D7;
-
+    left: 20%;
+    padding: 10px;
 
 }
 
-input.button {
+
+
+.name {
 
     position: relative;
-    left: 18%;
-    padding: 1%;
-    margin-top: 1%;
+    left: 0%;
 
 }
+
+
+.email {
+
+    position: relative;
+    left: 1%;
+
+}
+
+
+.message {
+
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    padding: 10px;
+
+}
+
+
+
+input[type=text], select {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Montserrat';
+}
+
+textarea {
+  width: 180%;
+  height: 150px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  font-family: 'Montserrat';
+}
+
+
+.button {
+  position: absolute;
+  left: 0%;
+  margin: 10px;
+  top: 350%;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 14px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+  background-color: #FF7BAC;
+  border: none;
+  color: white;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.button:hover {opacity: 1}
+
+.button:hover {
+  box-shadow: 0 12px 16px 0 rgba(214,185,215,0.25), 0 17px 50px 0 rgba(214,185,215,0.20);
+}
+
 
 
  /* Style the Image Used to Trigger the Modal */
@@ -415,6 +497,8 @@ input.button {
     cursor: pointer;
 }
 
+
+
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
     .modal-content {
@@ -437,8 +521,17 @@ input.button {
 
 
 
+
+
+
+
+
+
+
+
+
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .column {
     flex: 100%;
     max-width: 100%;
@@ -569,25 +662,72 @@ input.button {
 
     }
 
-    table.form {
+
+
+
+    div.form {
+
+        position: absolute;
+        left: 0%;
+        padding: 10px;
+        top: 240%;
+
+    }
+
+
+
+    .name {
 
         position: relative;
         left: 0%;
 
     }
 
-    input.button {
+
+    .email {
 
         position: relative;
         left: 0%;
-        margin-left: 1%;
-        margin-bottom: 1%;
 
     }
 
+
+    .message {
+
+        position: absolute;
+        left: 0%;
+        top: 85%;
+        padding: 15px;
+
+    }
+
+
+
+    textarea {
+      width: 120%;
+      height: 150px;
+      padding: 10px 20px;
+      box-sizing: border-box;
+    }
+
+
+    .button {
+      position: absolute;
+      left: 0%;
+      margin: 15px;
+      top: 205%;
+    }
+
+    div.contact h2.com {
+
+    position: absolute;
+    left: 1%;
+    top: 160%;
 
 }
 
+
+}
 
 
 
