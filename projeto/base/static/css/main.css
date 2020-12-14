@@ -314,6 +314,7 @@ div.contact img.code {
  /* Style inputs, select elements and textareas */
 input[type=text], textarea{
 
+
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -321,8 +322,13 @@ input[type=text], textarea{
   box-sizing: border-box;
   resize: vertical;
 
-}
 
+.name {
+
+    position: relative;
+    left: 0%;
+
+}
 
 
 /* Style the container */
@@ -480,10 +486,6 @@ input[type=text], textarea{
 
 
 
-
-
-
-
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -498,6 +500,7 @@ input[type=text], textarea{
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
+
 
 /* Modal Content (Image) */
 .modal-content {
@@ -517,7 +520,7 @@ input[type=text], textarea{
     color: #ccc;
     padding: 10px 0;
     height: 150px;
-}
+  }
 
 /* Add Animation - Zoom in the Modal */
 .modal-content, #caption {
@@ -532,9 +535,11 @@ input[type=text], textarea{
     to {-webkit-transform:scale(1)}
 }
 
+
 @keyframes zoom {
     from {transform:scale(0)}
     to {transform:scale(1)}
+
 }
 
 /* The Close Button */
@@ -548,12 +553,14 @@ input[type=text], textarea{
     transition: 0.3s;
 }
 
+
 .close:hover,
 .close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
 }
+
 
 
 
