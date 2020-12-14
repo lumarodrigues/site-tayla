@@ -34,6 +34,8 @@ header {
     min-height: 100%;
     background: #000000;
     z-index: 1;
+    width: 15%;
+    background-color: black;
 
 }
 
@@ -57,7 +59,7 @@ div.menu {
 
 div.menu nav ul {
 
-    font-size: 18pt;
+    font-size: 100%;
     list-style: none;
     padding: 0px;
     text-align: center;
@@ -76,7 +78,7 @@ div.menu nav ul li a {
     text-decoration: none;
     letter-spacing: 5px;
     font-family: 'Architect';
-    font-size: 20px;
+    font-size: 100%;
 
 }
 
@@ -125,8 +127,8 @@ div.social ul li {
 .gallery {
 
     position: relative;
-    left: 17%;
-    width: 110%;
+    left: 16%;
+    width: 80%;
 
 }
 
@@ -139,9 +141,10 @@ div.social ul li {
 /* Create four equal columns that sits next to each other */
 .column {
   flex: 25%;
-  max-width: 25%;
+  width: 33%;
   padding: 0 0px;
   margin-top: 0.2%;
+  margin-bottom: 0.2%;
 }
 
 .column img {
@@ -244,7 +247,7 @@ div.contact {
     text-decoration: none;
     letter-spacing: 4px;
     position: relative;
-    left: 20%;
+    left: 15%;
     padding: 5px;
     color: #FF7BAC;
 
@@ -260,7 +263,7 @@ div.contact h1, a.social2, p {
     letter-spacing: 0px;
     position: relative;
     margin-top: 10px;
-    left: 16%;
+    left: 0%;
     color: #D6B9D7;
 
 }
@@ -273,9 +276,9 @@ div.contact h1.contact_me {
 
 div.contact h1 {
 
-    padding: 5px;
+    padding: 1%;
     color: #FFFF00;
-    left: 16%;
+    left: 0%;
 
 }
 
@@ -284,8 +287,9 @@ div.contact h2 {
 
     position: relative;
     color: #D6B9D7;
-    left: 16.3%;
+    left: 0%;
     letter-spacing: 0px;
+    padding: 1%;
 
 }
 
@@ -293,47 +297,12 @@ div.contact h2.com {
 
     left: 0%;
     top: 0%;
+    padding: 1%;
 
 }
 
-
-div.contact img {
-
-    position: relative;
-    left: 16%;
-
-}
 
 div.contact img.code {
-
-    position: absolute;
-    float: left;
-    left: 0%;
-    top: 5%;
-
-}
-
-
-
-div.form {
-
-    position: relative;
-    left: 20%;
-    padding: 10px;
-
-}
-
-
-
-.name {
-
-    position: relative;
-    left: 0%;
-
-}
-
-
-.email {
 
     position: relative;
     left: 1%;
@@ -341,72 +310,57 @@ div.form {
 }
 
 
-.message {
 
-    position: absolute;
-    left: 0%;
-    top: 100%;
-    padding: 10px;
+ /* Style inputs, select elements and textareas */
+input[type=text], textarea{
 
-}
-
-
-
-input[type=text], select {
   width: 100%;
-  padding: 10px 20px;
-  margin: 8px 0;
-  display: inline-block;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  font-family: 'Montserrat';
+  resize: vertical;
+
 }
 
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: 'Montserrat';
+
+
+/* Style the container */
+.container {
+
+  position: relative;
+  left: 0%;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 1%;
+  width: 50%;
+
 }
 
-textarea {
-  width: 180%;
-  height: 150px;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  resize: none;
-  font-family: 'Montserrat';
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
 }
-
 
 .button {
-  position: absolute;
+
+  position: relative;
   left: 0%;
-  margin: 10px;
-  top: 350%;
-  background-color: #4CAF50; /* Green */
+  margin-top: 6px;
+  padding: 5px;
   border: none;
-  color: white;
-  padding: 14px 40px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 12px;
+  color: white;
   border-radius: 12px;
   background-color: #FF7BAC;
-  border: none;
-  color: white;
-  opacity: 0.8;
+  opacity: 1;
   transition: 0.2s;
+  font-family: 'Montserrat';
+
 }
 
 .button:hover {opacity: 1}
@@ -415,6 +369,104 @@ textarea {
   box-shadow: 0 12px 16px 0 rgba(214,185,215,0.25), 0 17px 50px 0 rgba(214,185,215,0.20);
 }
 
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 900px) {
+  .col-75, input[type=button] {
+    width: 100%;
+    margin-top: 0;
+
+  }
+
+     header {
+
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    background: #000000;
+    z-index: 1;
+
+
+
+   }
+
+
+
+
+   .gallery {
+
+    left: 0%;
+    width: 100%;
+
+   }
+
+    .row {
+
+      padding: 0px;
+
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+
+      padding: 0 0px;
+
+    }
+
+    .column img {
+
+      margin-top: 0px;
+
+    }
+
+
+    div.paragraph h1, ul.new_ul {
+
+        position: relative;
+        left: 5%;
+
+    }
+
+
+
+    div.paragraph p {
+
+        position: relative;
+        left: 5%;
+
+    }
+
+    div.paragraph img.tayla {
+
+        position: relative;
+        left: 0%;
+
+    }
+
+    div.paragraph img.realtayla {
+
+        position: absolute;
+        left: 0%;
+
+    }
+
+
+    .row {
+
+        padding: 5px;
+
+    }
+
+
+}
 
 
  /* Style the Image Used to Trigger the Modal */
@@ -425,6 +477,12 @@ textarea {
 }
 
 .myImg:hover {opacity: 0.7;}
+
+
+
+
+
+
 
 /* The Modal (background) */
 .modal {
@@ -504,238 +562,4 @@ textarea {
     .modal-content {
         width: 100%;
     }
-}
-
-@media only screen and (max-width: 700px) {
-  .modal-content {
-    width: 100%;
-  }
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-
-   header {
-
-    position: relative;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    background: #000000;
-    z-index: 1;
-
-
-   }
-
-   .gallery {
-
-    left: 0%;
-    width: 100%;
-
-   }
-
-    .row {
-
-      padding: 5px;
-
-    }
-
-    /* Create four equal columns that sits next to each other */
-    .column {
-
-      padding: 5 5px;
-
-    }
-
-    .column img {
-
-      margin-top: 5px;
-
-    }
-
-
-    div.paragraph h1, ul.new_ul {
-
-        position: relative;
-        left: 5%;
-
-    }
-
-
-
-    div.paragraph p {
-
-        position: relative;
-        left: 5%;
-
-    }
-
-    div.paragraph img.tayla {
-
-        position: relative;
-        left: 0%;
-
-    }
-
-    div.paragraph img.realtayla {
-
-        position: absolute;
-        left: 0%;
-
-    }
-
-
-
-
-    div.contact {
-
-        position: relative;
-        left: 0%;
-
-    }
-
-    div.contact h1, a.social2, p {
-
-        position: relative;
-        left: 0%;
-
-
-    }
-
-
-    div.contact h1 {
-
-        left: 0%;
-
-    }
-
-
-    div.contact h2 {
-
-        position: relative;
-        left: 0.3%;
-
-    }
-
-
-    div.contact h2.com {
-
-        left: 0%;
-        top: 0%;
-
-    }
-
-
-    div.contact img {
-
-        position: relative;
-        left: 0%;
-
-    }
-
-    div.contact img.code {
-
-        position: relative;
-        align: center;
-
-    }
-
-
-
-
-    div.form {
-
-        position: absolute;
-        left: 0%;
-        padding: 10px;
-        top: 240%;
-
-    }
-
-
-
-    .name {
-
-        position: relative;
-        left: 0%;
-
-    }
-
-
-    .email {
-
-        position: relative;
-        left: 0%;
-
-    }
-
-
-    .message {
-
-        position: absolute;
-        left: 0%;
-        top: 85%;
-        padding: 15px;
-
-    }
-
-
-
-    textarea {
-      width: 120%;
-      height: 150px;
-      padding: 10px 20px;
-      box-sizing: border-box;
-    }
-
-
-    .button {
-      position: absolute;
-      left: 0%;
-      margin: 15px;
-      top: 205%;
-    }
-
-    div.contact h2.com {
-
-    position: absolute;
-    left: 1%;
-    top: 160%;
-
-}
-
-
-}
-
-
-
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
 }
