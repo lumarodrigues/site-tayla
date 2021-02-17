@@ -185,12 +185,3 @@ if AWS_ACCESS_KEY_ID:
     INSTALLED_APPS.append('storages')
 
 
-
-# gmail settings
-
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False

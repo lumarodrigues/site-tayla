@@ -1,7 +1,9 @@
 {% load static %}
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 	<title>{% block title %}Tayla Belinot{% endblock title %}</title>
 	<meta charset="utf-8">
@@ -16,7 +18,10 @@
 	<link rel="icon" type="image/png" href="{% static 'img/favicon2.png' %}" />
 </head>
 
+
+
 <body>
+
 
 	<header>
 
@@ -50,23 +55,23 @@
 					<img alt="Logo" src="{% static 'img/twitter.png' %}" name='twitter-logo' width="40" height="40">
 				</a></li>
 
-				<li><a href="https://www.facebook.com/tayla.belinot" target="_blank">
-					<img alt="Logo" src="{% static 'img/facebook.png' %}" name='facebook-logo' width="40" height="40">
+				<li><a href="https://www.behance.net/taylabelinot" target="_blank">
+					<img alt="Logo" src="{% static 'img/behance.png' %}" name='behance-logo' width="40" height="40">
 				</a></li>
-
 
 				<li><a href="https://br.linkedin.com/in/tayla-belinot-69322165" target="_blank">
 					<img alt="Logo" src="{% static 'img/linkedin.png' %}" name='linkedin-logo' width="40" height="40">
 				</a></li>
+
 			</ul>
 
 
 
-		<div class="copyright">
+			<div class="copyright">
 
-			All images copyright by Tayla Belinot, 2017 - {% now "Y" %}
+				All images copyright by Tayla Belinot, 2017 - {% now "Y" %}
 
-		</div>
+			</div>
 
 
 		</div>
@@ -74,6 +79,7 @@
 
 
 	</header>
+
 
 	{% block body %}
 

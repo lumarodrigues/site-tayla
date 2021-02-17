@@ -1,7 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
-
 from django.conf import settings
 from django.contrib import admin, messages
 from django.contrib.admin.options import IS_POPUP_VAR
@@ -22,7 +20,7 @@ from django.utils.translation import gettext, gettext_lazy as _
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.debug import sensitive_post_parameters
 
-from projeto.base.models import User
+from projeto.base.models import User, Formulario
 
 csrf_protect_m = method_decorator(csrf_protect)
 sensitive_post_parameters_m = method_decorator(sensitive_post_parameters())
@@ -195,3 +193,6 @@ class UserAdmin(admin.ModelAdmin):
         return super().response_add(request, obj, post_url_continue)
 
 
+@admin.register(Formulario)
+class FormularioAdmin(admin.ModelAdmin):
+    list_display = ['id', 'nome', 'email', 'mensagem']

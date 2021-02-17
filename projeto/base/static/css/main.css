@@ -305,7 +305,8 @@ div.contact h2.com {
 div.contact img.code {
 
     position: relative;
-    left: 1%;
+    left: 0%;
+    top: 0%;
 
 }
 
@@ -320,6 +321,7 @@ input[type=text], textarea{
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
+  font-family: 'Montserrat';
 
 }
 
@@ -328,8 +330,8 @@ input[type=text], textarea{
 /* Style the container */
 .container {
 
-  position: relative;
-  left: 0%;
+  position: absolute;
+  left: 1%;
   border-radius: 5px;
   padding: 5px;
   margin-top: 1%;
@@ -465,6 +467,13 @@ input[type=text], textarea{
 
     }
 
+    input[type=text], textarea{
+
+         width: 140%;
+
+    }
+
+
 
 }
 
@@ -562,4 +571,6 @@ input[type=text], textarea{
     .modal-content {
         width: 100%;
     }
+
+
 }
