@@ -17,7 +17,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 
-from projeto.base.views import home, about_me, sketchbook, contact_me
+from projeto.base.views import home, about_me, sketchbook, contact_me, thank_you
 
 urlpatterns = [
 
@@ -27,6 +27,7 @@ urlpatterns = [
     path('about_me/', about_me, name='about_me'),
     path('sketchbook/', sketchbook, name='sketchbook'),
     path('contact_me/', contact_me, name='contact_me'),
+    path('thank_you/', thank_you, name='thank_you')
 
 ]
 
