@@ -80,6 +80,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'projeto.wsgi.application'
 
+# Configuração de envio de email
+
+EMAIL_BACKEND = config('EMAIL_BACKEND')
+SENDGRID_API_KEY = config('SENDGRID_API_KEY')
+SENDGRID_SANDBOX_MODE_IN_DEBUG = False
+EMAIL_USER = config('EMAIL_USER')
+
+
 
 # Configuração do Django Debug Toolbar
 

@@ -10,7 +10,6 @@ pytest-cov = "*"
 codecov = "*"
 
 [packages]
-django = "*"
 gunicorn = "*"
 python-decouple = "*"
 dj-database-url = "*"
@@ -19,6 +18,8 @@ django-s3-folder-storage = "*"
 psycopg2-binary = "==2.8.5"
 django-debug-toolbar = "*"
 pillow = "*"
+django-sendgrid-v5 = "*"
+django = "==3.1.8"
 
 [requires]
 python_version = "3.8"

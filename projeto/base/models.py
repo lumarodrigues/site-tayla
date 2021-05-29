@@ -6,8 +6,6 @@ from django.utils import timezone
 from django.core.mail import send_mail
 
 
-# Create your models here.
-
 class UserManager(BaseUserManager):
     use_in_migrations = True
 

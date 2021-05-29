@@ -1,7 +1,8 @@
-from django.http import HttpResponse
 from django.shortcuts import render
-
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse
 from projeto.forms import FormularioForm
+from projeto.settings import EMAIL_USER
 
 
 def home(request):
@@ -17,11 +18,15 @@ def sketchbook(request):
 
 
 def contact_me(request):
-    if request.method == "POST":
+    if request.method == 'POST':
         form = FormularioForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return render(request, 'base/contact_me.html')
-        else:
-            return HttpResponse('Formulario Invalido.')
+        name = request.POST['nome']
+        email = request.POST['email']
+        message = request.POST['mensagem']
+
+        try:
+            send_mail('Mensagem de ' + name, 'Nome: ' + name + '\nEmail: ' + email + '\n\nMensagem: ' + message,
+                      [EMAIL_USER], [EMAIL_USER], fail_silently=False,)
+        except BadHeaderError:
+            return HttpResponse('Invalid header found.')
     return render(request, 'base/contact_me.html')

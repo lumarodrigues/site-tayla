@@ -134,3 +134,7 @@ mediafiles/
 
 # postgres files for local development
 .pgdata
+
+.idea/
+
+.pytest_cache
